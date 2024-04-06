@@ -6,14 +6,13 @@ export function UserList(props) {
 
   return (
     <div>
+      <h2 className="text-center">Users</h2>
       {users.map((user, index) => {
         return (
           <UserItem
             key={index}
             name={user.name}
             email={user.email}
-            marketValueTrend={user.marketValueTrend}
-            isNew={user.isNew}
           />
         );
       })}

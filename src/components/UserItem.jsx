@@ -1,23 +1,12 @@
 import React from 'react';
 
 function UserItem(props) {
-  const { name, email, marketValueTrend, isNew } = props;
-  let marketValueBadge;
-
-  if (marketValueTrend === 'same') {
-    marketValueBadge = 'Cota de piata constanta';
-  } else if (marketValueTrend === 'up') {
-    marketValueBadge = 'Cota de piata in crestere';
-  } else if (marketValueTrend === 'down') {
-    marketValueBadge = 'Cota de piata in scadere';
-  }
-
+  const { name, email } = props;
+  
   return (
-    <div>
-      <h2>{name}</h2>
-      <p>{email}</p>
-      {isNew && <p>Jucator nou</p>}
-      {marketValueBadge}
+    <div className='rounded background-custom p-3 mb-3'>
+      <h3 className='text-center'>{name}</h3>
+      <p className='text-center'>{email}</p>
     </div>
   );
 }
