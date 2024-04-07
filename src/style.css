@@ -1,16 +1,21 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  padding: 1rem;
-  font-family: system-ui, sans-serif;
-  color: black;
-  background-color: white;
+  background-color: rgb(25, 30, 48);
+  font-family: 'Asap', sans-serif; 
 }
-
-h1 {
-  font-weight: 800;
-  font-size: 1.5rem;
+.btn-custom {
+  background-color: rgb(0, 135, 104);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+.btn-custom:hover,
+.btn-custom:active {
+  background-color: rgb(0, 115, 94);
+  color: #fff; 
+}
+.background-custom{
+  background-color: rgb(253, 253, 253);
+  box-shadow: rgba(25, 30, 48, 0.1) 0px 2rem 4rem 0px;
+}
+h2{
+  color: #fff;
 }

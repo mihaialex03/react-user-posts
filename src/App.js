@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './style.css';
 import { UserList } from './components/UserList';
 import PostList from './components/PostList';
+
 function App() {
   const [apiUsers, setApiUsers] = useState([]);
   const [apiPosts, setApiPosts] = useState([]);
@@ -32,8 +33,8 @@ function App() {
   return (
     <div className="App container mt-5">
     <div className="d-flex justify-content-center mb-3">
-      <button className="btn btn-custom m-2" onClick={handleDisplayUsers}>Afiseaza Utilizatorii</button>
-      <button className="btn btn-custom m-2" onClick={handleDisplayPosts}>Afiseaza Postarile</button>
+      <button className="btn btn-custom m-2" onClick={handleDisplayUsers}>Show users</button>
+      <button className="btn btn-custom m-2" onClick={handleDisplayPosts}>Show posts</button>
     </div>
     {displayUsers ? <UserList users={apiUsers} /> : <PostList posts={apiPosts} />}
   </div>
