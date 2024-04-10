@@ -3,7 +3,7 @@ export function ChangeLocationDropdown(){
     // folosesc componenta de dropdown din bootstrap
     return(
         <Dropdown>
-            <Dropdown.Toggle variant='success' id='dropdown-basic'>
+            <Dropdown.Toggle variant='success' id='dropdown-basic' className='btn-custom'>
                 Alege orasul
             </Dropdown.Toggle>
             <Dropdown.Menu>
