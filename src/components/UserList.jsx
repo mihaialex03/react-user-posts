@@ -13,6 +13,8 @@ export function UserList(props) {
             key={index}
             name={user.name}
             email={user.email}
+            username={user.username}
+            phone={user.phone}
           />
         );
       })}
