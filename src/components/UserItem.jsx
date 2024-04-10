@@ -1,7 +1,12 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 function UserItem(props) {
-  const { name, email, username, phone, id } = props;
+  const { name, email, username, phone, id, removeUser } = props;
+
+  function handleRemoveUser() {
+    removeUser(id);
+  }
   
   return (
     <div className='rounded background-custom p-3 mb-3'>
@@ -9,6 +14,7 @@ function UserItem(props) {
       <p className='text-center'>{email}</p>
       <p className='text-center'>{username}</p>
       <p className='text-center'>{phone}</p>
+      <Button onClick={handleRemoveUser} variant="delete">Stergeti user-ul </Button>
     </div>
   );
 }

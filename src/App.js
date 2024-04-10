@@ -39,6 +39,13 @@ function App() {
     setApiUsers(newUserList);
   }
 
+  function removeUser(userId) {
+    const filteredUsers = apiUsers.filter((apiUser) => {
+      return apiUser.id !== userId;
+    });
+    setApiUsers(filteredUsers);
+  }
+
   return (
     <div className="App container mt-5">
       <Container>
@@ -62,7 +69,7 @@ function App() {
         </button>
       </div>
       {displayUsers ? (
-        <UserList users={apiUsers} />
+        <UserList users={apiUsers} removeUser={removeUser}/>
       ) : (
         <PostList posts={apiPosts} />
       )}

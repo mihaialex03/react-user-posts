@@ -2,8 +2,7 @@ import React from 'react';
 import UserItem from './UserItem';
 
 export function UserList(props) {
-  const { users } = props;
-
+  const { users, removeUser } = props;
   return (
     <div>
       <h2 className="text-center">Users</h2>
@@ -15,6 +14,8 @@ export function UserList(props) {
             email={user.email}
             username={user.username}
             phone={user.phone}
+            id={user.id}
+            removeUser={removeUser}
           />
         );
       })}
