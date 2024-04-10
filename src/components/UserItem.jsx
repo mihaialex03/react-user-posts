@@ -14,7 +14,7 @@ function UserItem(props) {
       <p className='text-center'>{email}</p>
       <p className='text-center'>{username}</p>
       <p className='text-center'>{phone}</p>
-      <Button onClick={handleRemoveUser} variant="delete">Stergeti user-ul </Button>
+      <Button onClick={handleRemoveUser} variant="danger">Delete user</Button>
     </div>
   );
 }
