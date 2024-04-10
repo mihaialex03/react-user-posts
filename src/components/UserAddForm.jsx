@@ -83,7 +83,7 @@ export function UserAddForm(props) {
         </Button>
 
 
-        <Button onclick={handleFormReset} variant="danger">
+        <Button onClick={handleFormReset} variant="danger">
             Reset
         </Button>
 
