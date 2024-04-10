@@ -8,6 +8,8 @@ export function UserAddForm(props) {
     const {addUser} = props;
     const [ name, setName ] = useState('');
     const [ email, setEmail ] = useState('');
+    const [ username, setUsername] = useState('');
+    const [phone, setPhone ]= useState('');
     // preiau valorile din inputuri si le pun pe state
     function handleNameChange(event){
         const nameValue = event.target.value;
@@ -81,7 +83,7 @@ export function UserAddForm(props) {
         </Button>
 
 
-        <Button onclick={handleFormReset} variant="danger">
+        <Button onClick={handleFormReset} variant="danger">
             Reset
         </Button>
 
