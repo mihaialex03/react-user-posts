@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './style.css';
 import { UserList } from './components/UserList';
 import PostList from './components/PostList';
+import { ChangeLocationSection } from './components/ChangeLocation';
+import { UserAddForm } from './components/UserAddForm';
 
 function App() {
   const [apiUsers, setApiUsers] = useState([]);
@@ -29,10 +31,16 @@ function App() {
   const handleDisplayPosts = () => {
     setDisplayUsers(false);
   };
+  function addUser(newUser){
+    const newUserList = [newUser,...apiUsers];
+    setApiUsers(newUserList);
+  }
 
   return (
     <div className="App container mt-5">
     <div className="d-flex justify-content-center mb-3">
+      <ChangeLocationSection/>
+      <UserAddForm addUser={addUser}/>
       <button className="btn btn-custom m-2" onClick={handleDisplayUsers}>Show users</button>
       <button className="btn btn-custom m-2" onClick={handleDisplayPosts}>Show posts</button>
     </div>
