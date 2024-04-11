@@ -55,7 +55,7 @@ export function UserAddForm(props) {
 
     return(
     <Form className='mb-3' onSubmit={handleFormSubmit}>
-        <Form.Group className='mb-3' controlId='formBasicName'>
+        <Form.Group className='mb-3 text-white' controlId='formBasicName'>
             <Form.Label>Name:</Form.Label>
             <Form.Control placeholder='Ex: Popescu Ion'value={name} onChange={handleNameChange}/>
         </Form.Group>
